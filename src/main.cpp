@@ -1,5 +1,5 @@
 #include <Arduino.h>
-#include "GPS.h"
+#include "mkr_gps.h"
 
 GPSModule gps;
 

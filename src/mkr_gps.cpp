@@ -1,4 +1,4 @@
-#include "GPS.h"
+#include "mkr_gps.h"
 
 void GPSModule::initialize() {
     // begin the GPS with the GPS_MODE_SHIELD parameter to configure the MKR GPS Shield
