@@ -1,3 +1,5 @@
+// Air particulate sensor
+
 #ifndef PMSA003I_H
 #define PMSA003I_H
 

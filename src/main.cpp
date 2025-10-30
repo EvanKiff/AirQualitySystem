@@ -11,6 +11,11 @@ GPSModule gps;
 PMSA003I pmsSensor;
 #endif
 
+#ifdef ENABLE_SCD40
+#include "scd40.h"
+SCD40 scdSensor;
+#endif
+
 void setup() {
 
   // initialize serial communications and wait for port to open
@@ -24,6 +29,10 @@ void setup() {
 
   #ifdef ENABLE_PMSA003I
   pmsSensor.initialize();
+  #endif
+
+  #ifdef ENABLE_SCD40
+  scdSensor.initialize();
   #endif
 
 }
@@ -44,5 +53,12 @@ void loop() {
     pmsSensor.printData();
   }
   delay(1000); // wait for 1 second
+  #endif
+
+  #ifdef ENABLE_SCD40
+  if (scdSensor.readData()) {
+    scdSensor.printData();
+  }
+  delay(5000); // wait for 5 seconds
   #endif
 }
