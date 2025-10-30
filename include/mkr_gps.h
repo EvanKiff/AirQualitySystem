@@ -6,6 +6,7 @@
 
 class GPSModule {
 public:
+    GPSModule();
     void initialize();
     void standby();
     void wakeup();

@@ -1,5 +1,12 @@
 #include "mkr_gps.h"
 
+GPSModule::GPSModule() {
+    latitude = 0.0;
+    longitude = 0.0;
+    altitude = 0.0;
+    satellites = 0;
+}
+
 void GPSModule::initialize() {
     // begin the GPS with the GPS_MODE_SHIELD parameter to configure the MKR GPS Shield
     if (!GPS.begin(GPS_MODE_SHIELD)) {
