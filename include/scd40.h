@@ -10,6 +10,7 @@ public:
     SCD40(); // Constructor
     void initialize(); // Initialize the sensor
     bool readData(); // Read temp, humidity, and co2 data from the sensor at once
+    String getDataString(); // Get the sensor data as a comma-separated string
     void printData(); // Print the sensor data to Serial Monitor
 
 private:

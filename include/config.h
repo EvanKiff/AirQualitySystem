@@ -4,7 +4,8 @@
 #define CONFIG_H
 
 // #define ENABLE_GPS
-// #define ENABLE_PMSA003I
+#define ENABLE_PMSA003I
 #define ENABLE_SCD40
+#define ENABLE_SD
 
 #endif

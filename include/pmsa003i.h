@@ -12,6 +12,7 @@ public:
     PMSA003I(); // Constructor
     void initialize(); // Initialize the sensor
     bool readData(); // Read data from the sensor
+    String getDataString(); // Get the sensor data as a comma-separated string
     void printData(); // Print the sensor data to Serial Monitor
 
 private:

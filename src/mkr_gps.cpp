@@ -46,6 +46,14 @@ bool GPSModule::waitForData() {
     return true;
 }
 
+String GPSModule::getDataString() {
+    // Create a comma-separated string of the data
+    String dataString = String(latitude, 7) + "," +
+                        String(longitude, 7) + "," +
+                        String(altitude);
+    return dataString;
+}
+
 void GPSModule::printData() {
     // Print GPS values
     Serial.println();

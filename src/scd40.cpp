@@ -33,6 +33,14 @@ bool SCD40::readData(){
     return true;
 }
 
+String SCD40::getDataString(){
+    // Create a comma-separated string of the data
+    String dataString = String(co2) + "," +
+                        String(temperature) + "," +
+                        String(humidity);
+    return dataString;
+}
+
 // Print the sensor data to serial monitor
 void SCD40::printData(){
     Serial.print("CO2 [ppm]: ");

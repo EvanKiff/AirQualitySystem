@@ -25,6 +25,14 @@ bool PMSA003I::readData(){
     return true;
 }
 
+String PMSA003I::getDataString(){
+    // Create a comma-separated string of the data
+    String dataString = String(data.pm10_standard) + "," +
+                        String(data.pm25_standard) + "," +
+                        String(data.pm100_standard);
+    return dataString;
+}
+
 void PMSA003I::printData(){
     // Print out the data obtained
     Serial.println("PMSA003I Sensor Data:");

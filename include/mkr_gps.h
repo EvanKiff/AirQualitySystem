@@ -13,6 +13,7 @@ public:
     void standby();
     void wakeup();
     bool waitForData();
+    String getDataString();
     void printData();
 
 private:
