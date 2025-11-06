@@ -8,20 +8,18 @@ GPSModule::GPSModule() {
 }
 
 void GPSModule::initialize() {
-    // begin the GPS with the GPS_MODE_SHIELD parameter to configure the MKR GPS Shield
+    // begin the GPS as a shield on the arduino
     if (!GPS.begin(GPS_MODE_SHIELD)) {
         Serial.println("Failed to initialize GPS!");
         while (1);
     }
-}
 
-void GPSModule::standby() {
     // Required standby as implemented by the GPS library
     Serial.println("standby");
     GPS.standby();
-}
 
-void GPSModule::wakeup() {
+    delay(10000); // Wait 10 seconds
+
     // Required wakeup as implemented by the GPS library
     Serial.println("wakeup");
     GPS.wakeup();
@@ -47,7 +45,7 @@ bool GPSModule::waitForData() {
 }
 
 String GPSModule::getDataString() {
-    // Create a comma-separated string of the data
+    // Create a comma-separated string of the data to write to SD
     String dataString = String(latitude, 7) + "," +
                         String(longitude, 7) + "," +
                         String(altitude);
@@ -55,7 +53,7 @@ String GPSModule::getDataString() {
 }
 
 void GPSModule::printData() {
-    // Print GPS values
+    // Print GPS values for testing
     Serial.println();
     Serial.print("Location: ");
     Serial.print(latitude, 7);

@@ -8,19 +8,18 @@
 
 class GPSModule {
 public:
-    GPSModule();
-    void initialize();
-    void standby();
-    void wakeup();
-    bool waitForData();
-    String getDataString();
-    void printData();
+    GPSModule();    // Constructor
+    void initialize();  // fully initialize the GPS module
+    bool waitForData(); // wait for GPS data to be available
+    String getDataString(); // format data as string for SD write
+    void printData();       // print member variables for testing
 
 private:
+    // Member variables to hold GPS data
     float latitude;
     float longitude;
     float altitude;
     int satellites;
 };
 
-#endif
+#endif // GPS_H

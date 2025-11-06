@@ -17,7 +17,7 @@ void PMSA003I::initialize() {
 }
 
 bool PMSA003I::readData(){
-    // Check if data is available from the sensor
+    // Read data from the sensor
     if (!aqi.read(&data)){
         Serial.println("Could not read data from PM2.5 sensor");
         return false;
@@ -26,7 +26,7 @@ bool PMSA003I::readData(){
 }
 
 String PMSA003I::getDataString(){
-    // Create a comma-separated string of the data
+    // Create a comma-separated string of the data to write to SD
     String dataString = String(data.pm10_standard) + "," +
                         String(data.pm25_standard) + "," +
                         String(data.pm100_standard);
@@ -34,7 +34,7 @@ String PMSA003I::getDataString(){
 }
 
 void PMSA003I::printData(){
-    // Print out the data obtained
+    // Print out the data obtained for testing
     Serial.println("PMSA003I Sensor Data:");
     Serial.print("PM 1.0 (ug/m3): ");
     Serial.println(data.pm10_standard);

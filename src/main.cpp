@@ -30,9 +30,6 @@ void setup() {
   #ifdef ENABLE_GPS
   // initialize GPS and setup working power state
   gps.initialize();
-  gps.standby();
-  delay(10000); // wait for 10 seconds
-  gps.wakeup();
   #endif
 
   #ifdef ENABLE_PMSA003I

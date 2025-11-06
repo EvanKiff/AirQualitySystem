@@ -6,10 +6,10 @@
 
 class SDManager {
 public:
-    SDManager(); // Constructor
-    void initialize(); // Initialize the SD card
+    SDManager();                        // Constructor
+    void initialize();                  // Initialize the SD card module
     void writeLine(const String& line); // Write a line to the SD card file
-    void printFile(); // Print the contents of the file to Serial Monitor
+    void printFile();                   // Print the contents of the file to serial montior for testing
 
 private:
     const char* filename = "data.txt"; // Name of the file on the SD card
