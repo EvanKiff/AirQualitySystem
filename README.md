@@ -53,10 +53,12 @@ AirQualitySystem/
 ├── lib/
 │   └── SPI/              # SPI library (manually added)
 ├── src/
-│   ├── main.cpp          # Main system logic
+│   ├── main.cpp          # Main system logic for sensor suite
 │   ├── mkr_gps.cpp       # GPS module implementation
 │   ├── pmsa003i.cpp      # PMSA003I sensor implementation
 │   ├── scd40.cpp         # SCD40 sensor implementation
-│   └── sd_manager.cpp    # SD card manager implementation
+│   ├── sd_manager.cpp    # SD card manager implementation
+│   ├── analyze.py        # Data analysis file
+│   └── LineParser.py     # Parses acquired data from a .txt file
 ├── platformio.ini        # PlatformIO project configuration
 └── README.md             # Project documentation
