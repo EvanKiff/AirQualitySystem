@@ -53,3 +53,8 @@ void SCD40::printData(){
     Serial.println(humidity);
     Serial.println();
 }
+
+void SCD40::powerDown() {
+    scd4x.stopPeriodicMeasurement(); // Stop periodic measurements to save power
+    Serial.println("SCD40 powered down.");
+}

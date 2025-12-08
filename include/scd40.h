@@ -12,6 +12,7 @@ public:
     bool readData();        // Read temp, humidity, and co2 data from the sensor at once
     String getDataString(); // Get the sensor data as a comma-separated string to write to SD
     void printData();       // Print the sensor data to serial monitor
+    void powerDown();
 
 private:
     SensirionI2cScd4x scd4x; // Instance of the Sensirion SCD4x library
