@@ -58,7 +58,6 @@ AirQualitySystem/
 │   ├── pmsa003i.cpp      # PMSA003I sensor implementation
 │   ├── scd40.cpp         # SCD40 sensor implementation
 │   ├── sd_manager.cpp    # SD card manager implementation
-│   ├── analyze.py        # Data analysis file
-│   └── LineParser.py     # Parses acquired data from a .txt file
+│   └── plot_air_quality_map.py  # Plots data visualization
 ├── platformio.ini        # PlatformIO project configuration
 └── README.md             # Project documentation
