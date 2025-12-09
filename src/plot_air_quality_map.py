@@ -144,9 +144,6 @@ for _, row in df_avg.iterrows():
         popup=popup_html
     ).add_to(m)
 
-
-# ---------------------------------------------------
 # Save output
-# ---------------------------------------------------
 m.save("environment_map.html")
 print("SUCCESS: Map saved as environment_map.html")
